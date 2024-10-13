@@ -2,47 +2,81 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-header,
-section h2,
-section h3,
-form button {
-    font-family: 'Bungee', cursive;
-}
-
-
-body, input, textarea {
-    font-family: 'Roboto', 'sans-serif';
-    background-color: #dfd5f0;
     
 }
 
-header {
-    padding: 16px 0;
-    background-color: #42129b;
-    color: #bba5e4;
+section h2 {
+    margin-left: auto;
+    
+    
 }
 
-header h1,
-section h2 {
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+    background: linear-gradient(150deg, #000000, #9e00ff);
+    background-size: 140% 140%;
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 50px;
+    font-family: "Protest Strike";
+    
+    
+}    
+
+p {
+    margin-top: 10px;
+    
+}
+
+h1, p, a {
+    color: white;
+    margin-right: 300px;
+    
+    
+    
+}
+
+section {
+    display: block;
+    padding: 30px 30px; 
+    margin-left: auto;
+}
+
+.home .informacoes p {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: "Protest Strike";
+}
+
+header h1, section h2, section h3 {
     font-weight: normal;
+   
+    
 }
 
 header nav li {
     display: inline;
     margin-left: 16px;
     font-size: 18px;
+    
 }
 
 header nav li a {
-    color: #bba5e4;
+    background: linear-gradient(150deg, #000000, #9e00ff);
+    
 }
 
-.container{
-    max-width: 1280px;
+.container {
+    max-width: 998px;
     width: 100%;
     margin: 0 auto;
+    
 }
 
 header .container,
@@ -52,8 +86,23 @@ section .container {
     justify-content: space-between;
 }
 
+.brands-list {
+    display: flex;
+}
+
 .brands-list img {
-  height: 24px;
+    height: 30px;
+    width: auto;
+    max-width: 100%; 
+}
+img {
+    position: relative;
+    height: 80px;
+    width: auto;
+    max-width: 100%; 
+    margin-left: -10px;
+    margin-right: auto;
+    margin-top: 10px;
 }
 
 .brands-list li {
@@ -64,45 +113,84 @@ section .container {
     align-items: flex-start;
 }
 
-section {
-    padding: 24px 0;
-}
-
 section h2 {
     margin-bottom: 16px;
-    color: #5a2a99;
+    
 }
 
-section p{
+section p {
     margin-bottom: 8px;
 }
 
-section img{
+section img {
     margin-right: 32px;
+
 }
 
-.store-front {
-     margin-right: 32px;
+.imagem-dev img{
+height: 400px;
+margin-top: -800px;
+
+    
 }
 
-.social-links img{
-    height: 24px;
-}
-
-.social-links li {
+.imagem-dev li{
     display: inline;
-    margin-right: 8px;
+    margin-right: 20px;
 }
 
-.social-links li a{
-    text-decoration: none;
+.imagem-dev li a{
+    margin: 800px;
+
 }
 
-#contact .container{
+.social-links img {
+    justify-content: center;
+    padding: 0px;
+    height: 50px ;
+    width: 50px ;
+}
+
+.social-links li{
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-links li, a {
+    margin: 260px;
+}
+
+.contact-methods h2 {
+    padding: 0px;
+    margin-left: 180px;
+   }
+
+.projetos img{
+    height: 100px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+#contact .container {
     display: block;
+    margin-right: 700px;
 }
 
-.contact-methods{
+#contact .projetos{
+    display: block;
+    margin-left: 250px;
+    
+}
+
+#contact .projetos a{
+    margin-left: 160px;
+}
+
+#contact .projetos div{
+    margin-top: 8px;
+}
+
+.contact-methods {
     display: flex;
     justify-content: space-between;
 }
@@ -110,10 +198,10 @@ section img{
 form input, 
 form textarea,
 form button {
-  display: block;
-  width: 320px;
-  margin-bottom: 8px;
-  padding: 8px;
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
 }
 
 form textarea {
@@ -121,28 +209,47 @@ form textarea {
     height: 180px;
 }
 
-section h3 {
-    margin-bottom: 16px;
-    color: #5a2a99;
+section h2, h3 {
+    margin-bottom: 10px;
+    color: #4497e6;
+    font-family: "Sixtyfour Convergence";
 }
 
 form button {
-    background-color: #4a0d72;
+    background-color: #9533a8;
     color: #ecf0f1;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color:#5a2a99;
+    background-color: #aa38a4;
 }
 
 input:focus, textarea:focus {
-    outline-color: #5a2a99;
+    outline-color: #a18ac0;
 }
 
-footer {
-    background-color: #5a2a99;
-    color: #ecf0f1;
-    padding: 16px 0;
-}
+.sixtyfour-convergence-uniquifier {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0,
+      "XELA" 0,
+      "YELA" 0;
+  }
+
+  .protest-strike-regular {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+
+
+
