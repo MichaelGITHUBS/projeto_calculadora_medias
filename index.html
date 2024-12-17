@@ -1,105 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site pessoal</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <title>Cauculadora de médias</title>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
-
-
-   
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Shade&family=Bungee+Spice&family=Bungee+Tint&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Monofett&family=Nabla&family=Protest+Strike&family=Roboto+Slab:wght@100..900&family=Rubik+Puddles&family=Sixtyfour+Convergence&family=Yuji+Mai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./main.css">
 
 </head>
 <body>
-    <header>
-        <section class="home">
-            <img class="MM" src="./imagens/MM.png" alt="Imagem de MM"/>
-            <div class="informacoes">
-                <div class="texto">
-                    <h1>Olá, sou Miguel Mota!</h1>
-                    <p>
-                        Sou um programador iniciante que estou em constante evolução na programação em busca de conhecer e me aprimorar mais ainda nessa área.
-                    </p>
-                    <p>Estou aprendendo sobre CSS, Python, HTML, onde ao mesmo tempo estudo um pouco sobre PowerBI e inteligencia artificial no qual estou cursando. 
-                        Já tinha conhecimento prévio antes de cursa esses assuntos, no qual aprendi mais ainda sobre as linguagens e como são utilizadas no mercado de trabalho, como por exemplo, mesmo que seja o básico, sites personalizados, pessoais (como esse por exemplo), entre outros que ainda estou em desenvolvimento.</p>
-                 <p>
-                    No meu tempo livre gosto muito de ler, principalmente, livros clássicos e de vez em quando algumas histórias fictícias. 
-                      Além de ler, eu gosto de fazer outras coisas como assistir filmes, séries, entre outras coisas do contidiano.
-                 </p>
-                </div> <!-- Fechar div .texto aqui -->
-            </div> <!-- Fechar div .informacoes aqui -->
-        </section>
-    </header>   
-    <section>
-        <div >
-            <ul class="imagem-dev">
-                <li>
-                    <a>
-                        <img src="imagens/Imagemdev.png" alt="Imagem de desenvolvedor">
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="projetos">
-        <h2>MEUS PROJETOS ANTERIORES</h2>
-        <div class="container-projetos">
-        <div class="projeto ativo">
-            <a href="https://site-gamesshop-kvlhvvg63-miguels-projects-bb4288c5.vercel.app/" target="_blank">
-            <img src="imagens/Captura de Tela (214).png" alt="Game-Shop"> 
-            </a>
-            <a href="https://michaelgithubs.github.io/curso_vscode/" target="_blank">
-                <img src="imagens/Captura de Tela (215).png" alt="Portal de notícias">
-            </a>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <h2>Contato</h2>
-            <div class="contact-methods">
-                <div>
-                    <h3>Fale comigo</h3>
-                    <form>
-                        <input type="text" placeholder="Seu nome" required />
-                        <input type="email" placeholder="Seu email" required />
-                        <input type="tel" placeholder="Seu telefone (opcional)" />
-                        <textarea placeholder="Sua mensagem" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-                <div>
-                    <ul class="social-links">
-                        <h2>Me acompanhe nas redes sociais!</h2>
-                        <li>
-                            <a href="https://github.com/MichaelGITHUBS" title="Siga-me no GitHub" target="_blank">       
-                                <img src="imagens/Hubdesktop.png" alt="Logo do GitHub">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/lizmotadesigner/" title="Siga-me no Instagram" target="_blank">
-                                <img src="imagens/LogoInsta.png" alt="Logo do Instagram">
-
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.roblox.com/pt/users/4783488360/profile" title="Siga-me no roblox" target="_blank">
-                                <img src="imagens/Pngroblox.png" alt="Logo do roblox">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-          </div>
-        </div>
-    </section>
+    <div class="container">
+        <header>
+            <img src="./imagens/logo.png" alt="capelo e diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form id="form-atividade">
+            <input type="text" id="nome-atividade" placeholder="Nome da atividade" />
+            <input type="number" id="nota-atividade" required placeholder="Nota da atividade" min="0" max="10" />
+            <button type="submit">Adicionar +</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Nome da atividade
+                    </th>
+                    <th>Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Média Final</td>
+                    <td id="media-final-valor">7</td>
+                    <td id="media-final-resultado"><span class="resultado reprovado">Aprovado</span></td>
+                </tr>
+            </tfoot>
+        </table>    
+    </div>
+    <script src="./main.js"></script>
 </body>
-
+</html>

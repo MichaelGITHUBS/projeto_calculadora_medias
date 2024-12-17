@@ -2,254 +2,96 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Roboto', sans-serif;
 }
-
-section h2 {
-    margin-left: auto;
-    
-    
-}
-
 
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0 auto;
-    max-width: 1120px;
-    background: linear-gradient(150deg, #000000, #9e00ff);
-    background-size: 140% 140%;
+    background-color: #E7E7E7;
+    padding-top: 100px;
 }
 
-h1{
-    font-size: 50px;
-    margin-top: 50px;
-    font-family: "Protest Strike";
-    
-    
-}    
-
-p {
-    margin-top: 10px;
-    
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-h1, p, a {
-    color: white;
-    margin-right: 300px;
-    
-    
-    
+header img {
+    height: 36px;
+    margin-right: 16px;
 }
 
-section {
-    display: block;
-    padding: 30px 30px; 
-    margin-left: auto;
-}
-
-.home .informacoes p {
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-family: "Protest Strike";
-}
-
-header h1, section h2, section h3 {
-    font-weight: normal;
-   
-    
-}
-
-header nav li {
-    display: inline;
-    margin-left: 16px;
-    font-size: 18px;
-    
-}
-
-header nav li a {
-    background: linear-gradient(150deg, #000000, #9e00ff);
-    
+header h1 {
+    font-style: 40px;
+    font-weight: bold;
 }
 
 .container {
-    max-width: 998px;
+    max-width: 960px;
     width: 100%;
     margin: 0 auto;
-    
 }
 
-header .container,
-section .container {
+form {
     display: flex;
-    align-items: center;
+    max-width: 640px;
+    width: 100%;
     justify-content: space-between;
+    margin-bottom: 56px;
 }
 
-.brands-list {
-    display: flex;
-}
-
-.brands-list img {
-    height: 30px;
-    width: auto;
-    max-width: 100%; 
-}
-img {
-    position: relative;
-    height: 80px;
-    width: auto;
-    max-width: 100%; 
-    margin-left: -10px;
-    margin-right: auto;
-    margin-top: 10px;
-}
-
-.brands-list li {
-    display: inline;
-}
-
-section .container {
-    align-items: flex-start;
-}
-
-section h2 {
-    margin-bottom: 16px;
-    
-}
-
-section p {
-    margin-bottom: 8px;
-}
-
-section img {
-    margin-right: 32px;
-
-}
-
-.imagem-dev img{
-height: 400px;
-margin-top: -800px;
-
-    
-}
-
-.imagem-dev li{
-    display: inline;
-    margin-right: 20px;
-}
-
-.imagem-dev li a{
-    margin: 800px;
-
-}
-
-.social-links img {
-    justify-content: center;
-    padding: 0px;
-    height: 50px ;
-    width: 50px ;
-}
-
-.social-links li{
-    display: inline;
-    margin-right: 10px;
-}
-
-.social-links li, a {
-    margin: 260px;
-}
-
-.contact-methods h2 {
-    padding: 0px;
-    margin-left: 180px;
-   }
-
-.projetos img{
-    height: 100px;
-    margin-right: 30px;
-    margin-left: 30px;
-}
-
-#contact .container {
-    display: block;
-    margin-right: 700px;
-}
-
-#contact .projetos{
-    display: block;
-    margin-left: 250px;
-    
-}
-
-#contact .projetos a{
-    margin-left: 160px;
-}
-
-#contact .projetos div{
-    margin-top: 8px;
-}
-
-.contact-methods {
-    display: flex;
-    justify-content: space-between;
-}
-
-form input, 
-form textarea,
-form button {
-    display: block;
-    width: 320px;
-    margin-bottom: 8px;
+form input {
+    font-size: 24px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
     padding: 8px;
 }
 
-form textarea {
-    resize: none;
-    height: 180px;
-}
-
-section h2, h3 {
-    margin-bottom: 10px;
-    color: #4497e6;
-    font-family: "Sixtyfour Convergence";
-}
-
 form button {
-    background-color: #9533a8;
-    color: #ecf0f1;
+    background-color: #009432;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
+    padding: 8px;
 }
 
-form button:hover {
-    background-color: #aa38a4;
+table{
+    width: 100%;
 }
 
-input:focus, textarea:focus {
-    outline-color: #a18ac0;
+table th{
+    border-bottom: 2px solid #000;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.sixtyfour-convergence-uniquifier {
-    font-family: "Sixtyfour Convergence", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "BLED" 0,
-      "SCAN" 0,
-      "XELA" 0,
-      "YELA" 0;
-  }
+table td{
+    text-align: center;
+    font-size: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
 
-  .protest-strike-regular {
-    font-family: "Protest Strike", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+table td img{
+    height: 30px;
+}
 
+.resultado {
+    padding: 8px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #000;
+    border-radius: 3px;
+}
 
+.aprovado{
+    background-color: #009432;
+}
 
-
-
+.reprovado{
+    background-color: red;
+}
