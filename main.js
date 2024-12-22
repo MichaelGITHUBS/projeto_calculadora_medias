@@ -1,72 +1,36 @@
-const form = document.getElementById("form-atividade");
-const imgAprovado = '<img src="./imagens/aprovado.png" alt="Emoji divertido" />';
-const imgReprovado = '<img src="./imagens/reprovado.png" alt="Emoji decepção" />';
-const atividades = [];
-const notas = [];
-const spanAprovado = "<span class ='resultado aprovado'>Aprovado</span>";
-const spanReprovado = "<span class ='resultado reprovado'>Reprovado</span>";
-const notaMinima = parseFloat(prompt("Digite a nota mínima:"));
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const form = document.getElementById("formCadastro");
+    const tabelaContatos = document.getElementById("tabelaContatos").getElementsByTagName("tbody")[0];
 
-let linhas = '';
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
 
+       
+        const nome = document.getElementById("user").value;
+        const telefone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
 
+    
+        if (nome === "" || telefone === "" || email === "") {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        } 
 
-form.addEventListener("submit", function(e){
-    e.preventDefault();
-
-     adicionaLinha();
-     atualizaTabela();
-     atualizaMediaFinal();
-})
-
-function adicionaLinha() {
-    const inputNomeAtividade = document.getElementById("nome-atividade");
-    const inputNotaAtividade = document.getElementById("nota-atividade");
-
-    if (atividades.includes(inputNomeAtividade.value)){
-        alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
-    } else {
         
-    atividades.push(inputNomeAtividade.value);
-    notas.push(parseFloat(inputNotaAtividade.value));
-    
-    let linha = "<tr>";
-    linha += `<td>${inputNomeAtividade.value}</td>`;  // concatenação (união dos conteúdos)
-    linha += `<td>${inputNotaAtividade.value}</td>`;
-    linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`; // inserimos o if com o sinal (?), enquanto o else inserimos (:)
-    linha += `</tr>`;
+        const novaLinha = tabelaContatos.insertRow();
 
-    linhas += linha;   
-    } 
+       
+        const celulaNome = novaLinha.insertCell(0);
+        const celulaTelefone = novaLinha.insertCell(1);
+        const celulaEmail = novaLinha.insertCell(2);
 
-    
-    inputNomeAtividade.value = "";
-    inputNotaAtividade.value = "";
-}
+       
+        celulaNome.textContent = nome;
+        celulaTelefone.textContent = telefone;
+        celulaEmail.textContent = email;
 
-function atualizaTabela(){
-    const corpoTabela = document.querySelector("tbody");
-    corpoTabela.innerHTML = linhas;
-
-}
-
-function atualizaMediaFinal(){
-    const mediaFinal = calculaMediaFinal();
-
-    document.getElementById("media-final-valor").innerHTML = mediaFinal.toFixed(2);
-    document.getElementById("media-final-resultado").innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
-    
-}
-
- function calculaMediaFinal() {
-    let somaDasNotas = 0;
-
-    for (let i = 0; i < notas.length; i++){
-        somaDasNotas += notas[i];
-    }
-
-    return somaDasNotas / notas.length;
-
- }
-
-
+        
+        form.reset();
+    });
+});
