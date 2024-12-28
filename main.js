@@ -1,36 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    const form = document.getElementById("formCadastro");
-    const tabelaContatos = document.getElementById("tabelaContatos").getElementsByTagName("tbody")[0];
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); 
-
-       
-        const nome = document.getElementById("user").value;
-        const telefone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
-
-    
-        if (nome === "" || telefone === "" || email === "") {
-            alert("Por favor, preencha todos os campos.");
-            return;
-        } 
-
-        
-        const novaLinha = tabelaContatos.insertRow();
-
-       
-        const celulaNome = novaLinha.insertCell(0);
-        const celulaTelefone = novaLinha.insertCell(1);
-        const celulaEmail = novaLinha.insertCell(2);
-
-       
-        celulaNome.textContent = nome;
-        celulaTelefone.textContent = telefone;
-        celulaEmail.textContent = email;
-
-        
-        form.reset();
-    });
-});
+$(document).ready(function() {
+       $('header button').click(function() {
+           $('form').slideDown();
+       });
+   
+       $('#cancelar').click(function() {
+           $('form').slideUp();
+       });
+   
+       $('form').on('submit', function(e) {
+           e.preventDefault();
+   
+           const enderecoDaNovaImagem = $('#urlImagem').val(); 
+   
+           const novoItem = $('<li style="display: none"></li>');
+   
+          
+           const novaImagem = $('<img />', { src: enderecoDaNovaImagem });
+           novaImagem.appendTo(novoItem);  
+   
+          
+           const link = $('<div class="overlay-imagem-link"></div>')
+               .append(
+                   $('<a></a>', {
+                       href: enderecoDaNovaImagem,
+                       target: '_blank',
+                       title: 'Ver imagem em tamanho real',
+                       text: 'Ver imagem em tamanho real'
+                   })
+               );
+           link.appendTo(novoItem); 
+   
+           $('ul').append(novoItem);
+           $(novoItem).fadeIn();
+           $("#endereco-imagem-nova").val('')
+   
+          
+           $('#urlImagem').val('');
+           $('form').slideUp();  
+       });
+   });

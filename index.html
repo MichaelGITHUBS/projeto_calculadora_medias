@@ -3,52 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <link rel="stylesheet" href="main.css" />
-
-    
-
+    <link rel="stylesheet" href="./main.css">
+    <title>Galeria de Fotos</title>
 </head>
 <body>
-    <section>
-        <form id="formCadastro">
-            <h1>Agenda de Contatos</h1>
-
-            <label for="user">Nome:</label>
-            <br />
-            <input id="user" name="user" type="text" />
-            <br />
-            <label for="phone">Telefone:</label>
-            <br />
-            <input id="phone" name="phone" type="tel" />
-            <br />
-            <label for="email">E-mail:</label>
-            <br />
-            <input id="email" name="email" type="email" />
-            <br />
-            <button type="submit" aria-label="Cadastrar contato">Cadastrar</button>
-            <br />
-            <br />
-            <table id="tabelaContatos">   
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody></tbody> 
-            </table>
-        </form>
-    </section>
-
-    <div class="container">
-    <img src="./imagens/computador-form.webp" alt="Tela de eletrônicos de fundo" class="background-image" />
-    <div class="content">
+    <header>
+        <h1>Galeria de fotos</h1>
+        <button type="button">Nova imagem +</button>
+    </header>
+    
+    <form id="formImagem">
+        <h2>Inserir nova imagem</h2>
         
-    </div>
-</div>
-
+        
+        <label for="urlImagem">URL da imagem</label>
+        <input type="url" id="urlImagem" name="urlImagem" required placeholder="URL da imagem">
+        
+        <button type="submit">Adicionar</button>
+        <button type="button" id="cancelar">Cancelar</button>
+    </form>
+    <ul>
+        <li>
+                <img src="./imagens/foto1.jpg" alt="Pintura de gato"/>
+                <div class="overlay-imagem-link">
+                    <a href="./imagens/foto1.jpg " title="Pintura de Gato"  target="_blank">
+                        Ver a imagem em tamanho real
+                    </a>
+                </div>
+        </li>
+        <li>
+            <img src="./imagens/foto2.jpg" alt="Imagem de Ganço"/>
+            <div class="overlay-imagem-link">
+                <a href="./imagens/foto2.jpg " title="Imagem de Ganço"  target="_blank">
+                    Ver a imagem em tamanho real
+                </a>
+            </div>
+    </li>
+    <li>
+        <img src="./imagens/foto3.jpg" alt="Cachorro filhote"/>
+        <div class="overlay-imagem-link">
+            <a href="./imagens/foto3.jpg " title="Imagem de Cachorros filhotes"  target="_blank">
+                Ver a imagem em tamanho real
+            </a>
+        </div>
+</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
